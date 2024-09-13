@@ -19,3 +19,4 @@ Minimal example:
 ```dart
     _webViewPlugin.launchWebView(context, url);
 ```
+

@@ -1,7 +1,7 @@
 name: weburl_calling
 description: "A flutter widget for Webview rendering"
 version: 0.0.1
-homepage:
+homepage: https://github.com/w3WebTech/weburl_calling.git
 
 environment:
   sdk: '>=3.4.4 <4.0.0'

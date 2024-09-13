@@ -17,6 +17,6 @@ To use this package, add weburl_calling as a dependency in your pubspec.yaml fil
 Minimal example:
 
 ```dart
-    _webViewPlugin.launchWebView(context, url);
+   WebViewPlugin(url: url,),
 ```
 

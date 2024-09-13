@@ -1,24 +1,22 @@
 library weburl_calling;
-
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
-class MyWebViewPlugin {
-  Future<void> launchWebView(BuildContext context, String url) async {
- 
-    final webView = WebViewWidget(
-      controller: WebViewController()
-        ..setJavaScriptMode(JavaScriptMode.unrestricted)
-        ..loadRequest(Uri.parse(url)),
-    );
+class WebViewPlugin extends StatelessWidget {
+  final String url;
 
-    // Show the WebView as a dialog
-    await showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
-        title: Text('WebView'),
-        content: webView,
-      ),
+  WebViewPlugin({required this.url});
+
+  @override
+  Widget build(BuildContext context) {
+    // Initialize the WebViewController
+    final WebViewController _controller = WebViewController()
+      ..setJavaScriptMode(JavaScriptMode.unrestricted)
+      ..loadRequest(Uri.parse(url));
+
+    return Scaffold(
+      
+      body: WebViewWidget(controller: _controller),
     );
   }
 }
